@@ -1,0 +1,9 @@
+services:
+  - docker
+
+script:
+  - container_id=$(mktemp)
+  - docker build -t container_under_test .
+  - docker run --detach -p 3000:3000 container_under_test > "${container_id}"
+  - sleep 10
+  - curl 'http://localhost:3000'

@@ -7,3 +7,7 @@ script:
   - docker run --detach -p 3000:3000 container_under_test > "${container_id}"
   - sleep 10
   - curl 'http://localhost:3000'
+
+notifications:
+  slack:
+    secure: u79rs3SNaZj+l616gguqxbdP5vjAllu/Qrb8p3DvBCvNu5NxhGUhcE5Qxmf9UkSEi+B1UT+18B2dEN2bcKPnxJ42FP/+RPqV9VHIO/vY0DdrZr62rrszYA8y872hRAyPB12oZkC7kSXYCAtUoogI7zK4FLlQ3EkcCXyYh4NwUqL3ytY/emJWKULcpnp1X5EeM7aXpnD6DivS1V0eFdvwFL2wpm3ydoVXrVhdSbh8ZZqCk4zI2vbJGjgILNtDCCUwGBiDY5TB0iYs3WmWcZLX4CEhNfhSpUMWxdK5V/sci4zJnLm1mW+Oyq+Anhv4Z0YD2G+rmwvwvk73trG+GxIW2bC41SsMeylmqwUOO7M5H4XwrQ1VU/aug+acKOSMkuL9QDap79FzdHloUb7/dVQc36Xls0NQBan7O4eAr0eISu5XLtoIKkzoo7B9ZO9qK6gUHnQ392HYN/vtFTEPttl/rV9a43H+ZdB1M8OuC9/qeHZVgwArr5ZR6b8+kgcdoMayD2JgNxOdrBRUxHWwgPpSmJ8V604++uybM/LkNxMSQDyTE3GCJhHLYgQldOi8eoBzIwtktHHn1OqQDttGoCbu2006102m96Hly3USpFRxHd5CI9dQUvpEIbvQxySsfaMYS+TLZD/Kwo0WyWOlwAmZu+TguRcB+nRlZY8cK72kwEA=
